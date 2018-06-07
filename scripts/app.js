@@ -35,9 +35,9 @@ setInterval( function() {
 
 });
 
-let list = [];
+var list = [];
 
-const addToList = () => {
+var addToList = () => {
   let taskValue = document.getElementById('task-input');
   let todoList = document.getElementById('todo-list');
   let listItem = document.createElement('li');
@@ -56,7 +56,7 @@ const addToList = () => {
   taskValue.value = '';
 }
 
-const removeFromList = (index) => {
+var removeFromList = (index) => {
   let todoList = document.getElementById('todo-list');
   console.log(index);
   list.splice(index, 1);
@@ -66,7 +66,7 @@ const removeFromList = (index) => {
   reconstructList();
 }
 
-const reconstructList = () => {
+var reconstructList = () => {
   let todoList = document.getElementById('todo-list');
 
   list.map((task, index) => {
@@ -84,4 +84,3 @@ const reconstructList = () => {
   })
 
 }
->>>>>>> todo-list

@@ -84,3 +84,10 @@ var reconstructList = () => {
   })
 
 }
+
+
+function getRandomBackgroundImage(min, max) {
+  var index = Math.floor(Math.random() * (max - min)) + min;
+  var url = 'url(' + background_images[index] + ')';
+  return url;
+}

@@ -1,19 +1,19 @@
-"use strict";
+//https://forismatic.com/en/api/
 
-window.momentum = window.momentum || {};
+function populate(text) {
+	console.log(text.quoteText);
+	// FIXME put the text on the page
+}
+function newQuoteGenerator() {
+  var quoteUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=populate"
 
-// Quotes
+  var getSettings = {
+  	url: quoteUrl,
+  	dataType: "jsonp",
+  	crossDomain: true
+  };
 
-momentum.QuoteCtrl = function() {
-  this.apiUrl = "https://talaikis.com/api/quotes/random/";
-};
+  $.get(getSettings);
+}
 
-momentum.QuoteCtrl.prototype = {
-  fetchQuote: function(cb) {
-    $.ajax({
-      url: this.apiUrl,
-      method: "GET",
-      success: cb
-    });
-  }
-};
+newQuoteGenerator();

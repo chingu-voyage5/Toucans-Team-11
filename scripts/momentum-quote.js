@@ -17,3 +17,6 @@ function newQuoteGenerator() {
 }
 
 newQuoteGenerator();
+
+
+var displayQuote = document.getElementById("newQuoteGenerator")

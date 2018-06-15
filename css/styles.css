@@ -59,6 +59,27 @@ ul li {
     font-size:1.5vw;
 }
 
+.todo-list-container{
+  background: pink;
+  width: 360px;
+  margin: 0 auto;
+}
+
+#todo-list {
+  width: 360px;
+}
+
+#todo-list li {
+  width: 360px;
+  font-size: 16px;
+  display: block;
+
+}
+
+.striked-out {
+  text-decoration: line-through;
+
+}
 
 
 
@@ -69,16 +90,16 @@ ul li {
   padding-left:10px; padding-right:10px;
 }
 
-@-webkit-keyframes mymove 
+@-webkit-keyframes mymove
 {
 0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
 50% {opacity:0; text-shadow:none; }
-100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }
 }
 
-@-moz-keyframes mymove 
+@-moz-keyframes mymove
 {
 0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
 50% {opacity:0; text-shadow:none; }
-100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }    
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }
 }*/

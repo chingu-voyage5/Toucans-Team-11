@@ -35,20 +35,39 @@ setInterval( function() {
 
 });
 
-var list = [];
+let list = [];
+const taskInput = document.getElementById('task-input');
 
-var addToList = () => {
+taskInput.onkeyup = function(e){
+  if (e.keyCode == 13){
+    addToList();
+  }
+}
+
+const addToList = () => {
   let taskValue = document.getElementById('task-input');
   let todoList = document.getElementById('todo-list');
   let listItem = document.createElement('li');
+  let trashCanButton = document.createElement('span');
+
+
+
+  //Add remove functionality to each trash can span
+  trashCanButton.onclick = removeFromList.bind(this, list.length);
+
+  //Add trash can symbol to trashCanButton
+  trashCanButton.innerText = 'X ';
+
+  //Add strikethrough functionality to each list items
+  listItem.onclick = function() {
+    this.classList.toggle('striked-out');
+  }
 
   //Adding new task text to created item
   listItem.innerText = taskValue.value;
 
-  //Add remove functionality to each Item
-  listItem.onclick = removeFromList.bind(this, list.length);
-
   //Adding Item to todo
+  listItem.insertBefore(trashCanButton, listItem.childNodes[0]);
   todoList.appendChild(listItem);
   list.push(taskValue.value);
 
@@ -56,7 +75,7 @@ var addToList = () => {
   taskValue.value = '';
 }
 
-var removeFromList = (index) => {
+const removeFromList = (index) => {
   let todoList = document.getElementById('todo-list');
   console.log(index);
   list.splice(index, 1);
@@ -66,20 +85,35 @@ var removeFromList = (index) => {
   reconstructList();
 }
 
-var reconstructList = () => {
+const reconstructList = () => {
   let todoList = document.getElementById('todo-list');
 
   list.map((task, index) => {
     let listItem = document.createElement('li');
+    let trashCanButton = document.createElement('span');
+
+
+    //Add remove functionality to each trash can span
+    trashCanButton.onclick = removeFromList.bind(this, index);
+
+    //Add trash can symbol to trashCanButton
+    trashCanButton.innerText = 'X ';
+
+
+    //Add strikethrough functionality to each list items
+    listItem.onclick = function() {
+      this.classList.toggle('striked-out');
+    }
 
     //Adding new task text to created item
     listItem.innerText = task;
 
-    //Add remove functionality to each Item
-    listItem.onclick = removeFromList.bind(this, index);
-
     //Adding Item to todo
     todoList.appendChild(listItem);
+
+    //Add trash can to list item
+    listItem.insertBefore(trashCanButton, listItem.childNodes[0]);
+
 
   })
 

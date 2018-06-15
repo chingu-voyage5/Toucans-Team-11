@@ -56,7 +56,7 @@ const addToList = () => {
   trashCanButton.onclick = removeFromList.bind(this, list.length);
 
   //Add trash can symbol to trashCanButton
-  trashCanButton.innerText = 'X ';
+  trashCanButton.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
 
   //Add strikethrough functionality to each list items
   listItem.onclick = function() {
@@ -96,8 +96,9 @@ const reconstructList = () => {
     //Add remove functionality to each trash can span
     trashCanButton.onclick = removeFromList.bind(this, index);
 
+
     //Add trash can symbol to trashCanButton
-    trashCanButton.innerText = 'X ';
+    trashCanButton.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
 
 
     //Add strikethrough functionality to each list items

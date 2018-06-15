@@ -59,21 +59,62 @@ ul li {
     font-size:1.5vw;
 }
 
+/* Todo-List Stylings */
 .todo-list-container{
   background: pink;
   width: 360px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 #todo-list {
   width: 360px;
+  margin: 0;
+  padding: 0;
 }
 
 #todo-list li {
   width: 360px;
   font-size: 16px;
   display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  background-color: #17181D;
+}
 
+#todo-list span {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+#todo-list li:hover span {
+  width: 40px;
+  opacity: 1.0;
+}
+
+#task-input {
+  font-size: 18px;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+#task-input:focus {
+  background: #fff;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  outline: 0;
 }
 
 .striked-out {

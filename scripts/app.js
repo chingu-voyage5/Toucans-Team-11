@@ -126,3 +126,7 @@ function getRandomBackgroundImage(min, max) {
   var url = 'url(' + background_images[index] + ')';
   return url;
 }
+// Rotating background images
+    var images = ['bgimage.jpg', 'bgimage2.jpg'];
+    $('<img class="fade-in" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-load');
+// Rotating background images End

@@ -7,61 +7,72 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <div class="clock">
+<body onload="startTime()">
+  <header>
+    <div class="links">
+      Links
+    </div>
+
+    <div class="weather">
+      <h2 class="temp"></h2>
+      <h3><span class="city"></span>, <span class="country"></span></h3>
+      <div class="iconpic">
+      <img src="" class='img img-responsive center-block'>
+      </div>
+      <h4 class="weatherDetail"></h4>
+      <div class="toggle" id="c">
+      <button type="button" class="btn btn-danger btn-lg">Toggle temperature</button>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="time">
+
+    </div>
+
+    <div class="greeting">
+      <p>Good afternoon, Chris</p>
+    </div>
+
+    <div class="focus">
+      <p>What is your main focus today?</p>
+      <input type="text" name="" value="">
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="settings">
+      Settings
+    </div>
+
+    <div class="quote">
+
+    </div>
+
+    <div class="todo">
+      <input id="task-input" placeholder="Add a task" type="text">
+
+      <ul id="todo-list">
+      </ul>
+    </div>
+
+  </footer>
+  <!-- <div class="clock">
       <div id="Date"></div>
       <ul>
           <li id="hours"></li>
           <li id="point">:</li>
           <li id="min"></li>
       </ul>
-  </div>
-  <img src= "images/bgimage2.jpg" alt="Temporary background image">
-
-
-  <aside class="todo-list-container">
-    <!-- <h1>Todo List</h1> -->
-    <input id="task-input" placeholder="Add a task" type="text">
-
-    <ul id="todo-list">
-    </ul>
-
-  </aside>
-
-  <div class ="quote">
-          <div id="quote-text"></div>
-  </div>
-
-    <div class="container">
-      <div class="container">
-    <div id="heading">
-      <h1 class="text-center">Weather app</h1>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-xs-8 col-xs-push-2 col-md-push-3">
-        <div class="weather text-center">
-          <h2 class="temp"></h2>
-          <h3><span class="city"></span>, <span class="country"></span></h3>
-          <div class="iconpic">
-            <img src="" class='img img-responsive center-block'>
-          </div>
-          <h4 class="weatherDetail"></h4>
-          <div class="toggle" id="c">
-            <button type="button" class="btn btn-danger btn-lg">Toggle temperature</button>
-          </div>
-        </div><!--weather-->
-      </div>
-    </div><!--row-->
-    <br/>
-    </div>
-
-  </div>
+  </div> -->
+  <!-- <img src= "images/bgimage2.jpg" alt="Temporary background image"> -->
 
 
 
     <script type='text/javascript' src='scripts/app.js'></script>
-    <script type ='text/javascript' src='scripts/momentum-quote.js'></script>
-    <script type ='text/javascript' src='scripts/weather.js'></script>
+    <!-- <script type ='text/javascript' src='scripts/weather.js'></script> -->
 </body>
 
 

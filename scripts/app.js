@@ -96,13 +96,15 @@ const reconstructList = () => {
   })
 }
 
-// ========== BACKGROUND IMAGE FUNCTIONALITY ==========
+const toggleTodo = () => {
+  let todoBox = document.getElementById('todo-box');
 
-// function getRandomBackgroundImage(min, max) {
-//   var index = Math.floor(Math.random() * (max - min)) + min;
-//   var url = 'url(' + background_images[index] + ')';
-//   return url;
-// }
+  if (todoBox.style.visibility === "visible") {
+    todoBox.style.visibility = "hidden";
+  } else {
+    todoBox.style.visibility = "visible";
+  }
+}
 
 // ========== WEATHER APP FUNCTIONALITY ==========
 
@@ -191,9 +193,9 @@ function newQuoteGenerator() {
 
 newQuoteGenerator();
 
+// ========== BACKGROUND IMAGE FUNCTIONALITY ==========
 
 // Rotating background images
     var images = ['bgimage.jpg', 'bgimage2.jpg'];
     $('<img class="fade-in" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-load');
 // Rotating background images End
-

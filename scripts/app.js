@@ -106,6 +106,49 @@ const toggleTodo = () => {
   }
 }
 
+// ========== MAIN FOCUS FUNCTIONALITY ==========
+const input = document.getElementById('focus-input');
+
+input.onkeyup = function(e){
+  if (e.keyCode == 13){
+    setMainFocus();
+  }
+}
+
+const setMainFocus = () => {
+  input.classList.toggle('hidden');
+
+  let focusItem = document.createElement('p');
+  let trashCan = document.createElement('span');
+  let divFocus = document.getElementById('focusDiv');
+
+  focusItem.classList.add('removable');
+
+  //Add remove functionality to each trash can span
+  trashCan.onclick = function deleteElement() {
+    let deletedElement = document.querySelectorAll('.removable')[0];
+    divFocus.removeChild(deletedElement);
+    input.classList.toggle('hidden');
+  }
+
+  //Add trash can symbol to trashCanButton
+  trashCan.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
+
+  //Add strikethrough functionality to each list items
+  focusItem.onclick = function() {
+    this.classList.toggle('striked-out');
+  }
+  //Adding new task text to created item
+  focusItem.innerText = input.value;
+  //Adding Item to focus
+  divFocus.appendChild(focusItem);
+
+  focusItem.insertBefore(trashCan, focusItem.childNodes[0]);
+
+  input.value = '';
+}
+
+
 // ========== WEATHER APP FUNCTIONALITY ==========
 
 $(document).ready(function() {

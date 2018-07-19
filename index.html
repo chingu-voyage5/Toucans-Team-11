@@ -10,20 +10,15 @@
 <body onload="startTime()">
   <header>
     <div class="links">
-      Links
     </div>
 
     <div class="weather">
-      <h2 class="temp"></h2>
-      <h3><span class="city"></span>, <span class="country"></span></h3>
-      <div class="iconpic">
-      <img src="" class='img img-responsive center-block'>
-      </div>
-      <h4 class="weatherDetail"></h4>
+      <div class="iconpic"> <img src="">  </div>
+      <h4 class="temp"></h4>
+      <h4><span class="city"></span></h4>
       <div class="toggle" id="c">
-      <button type="button" class="btn btn-danger btn-lg">Toggle temperature</button>
+      <button type="button" class="btn btn-danger btn-lg">F/C</button>
     </div>
-
   </header>
 
   <main>
@@ -32,19 +27,18 @@
     </div>
 
     <div class="greeting">
-      <p>Good afternoon, Chris</p>
+      <p>Hello there, Rockstar</p>
     </div>
 
-    <div class="focus">
+    <div class="focus" id="focusDiv">
       <p>What is your main focus today?</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" id="focus-input">
     </div>
 
   </main>
 
   <footer>
     <div class="settings">
-      Settings
     </div>
 
     <div class="quote">
@@ -56,7 +50,7 @@
 
       <div id="todo-box">
 
-      <input id="task-input" placeholder="Add a task" type="text">
+      <input id="task-input" placeholder="Add a task" type="text" onsubmit="setMainFocus()">
 
       <ul id="todo-list">
       </ul>

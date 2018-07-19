@@ -2,10 +2,25 @@
 body {
   font-family:Arial, Helvetica, sans-serif;
   color: #fff;
-  background-image: url("https://source.unsplash.com/collection/1163637/1080x1080");
+  background-image: url("https://source.unsplash.com/collection/1922729/1920x1080");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+}
+
+button {
+  background-color: #e7e7e7;
+  background:rgba(255,255,255,0.5);
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  text-shadow: 0 0 5px #000;
 }
 
 /* ========== LINKS STYLINGS ========== */
@@ -16,6 +31,7 @@ body {
 /* ========== WEATHER STYLINGS ========== */
 .weather {
   text-align: right;
+  text-shadow: 0 0 10px #000;
 }
 
 /* ========== MAIN STYLINGS ========== */
@@ -23,6 +39,7 @@ main {
   text-align: center;
   margin: 0 auto;
   padding: 0;
+  text-shadow: 0 0 10px #000;
 }
 
 /* ========== CLOCK STYLINGS ========== */
@@ -35,10 +52,46 @@ main {
   font-size: 4em;
 }
 
+.greeting p {
+  margin: 0;
+}
+
 /* ========== FOCUS STYLINGS ========== */
 .focus {
   font-size: 1.5em;
 }
+
+.focus input {
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  width: 50%;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.focus span {
+  background: #e74c3c;
+  height: 30px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+.focus p:hover span {
+  width: 40px;
+  opacity: 1.0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 
 /* ========== FOOTER STYLINGS ========= */
 footer {
@@ -54,6 +107,8 @@ footer {
 .quote {
   text-align: center;
   margin: 0 auto;
+  text-shadow: 0 0 10px #000;
+  padding-top: 5%;
 }
 
 /* ========== TODO STYLINGS ========== */
@@ -85,6 +140,7 @@ footer {
 
 .todo p {
   text-align: right;
+  text-shadow: 0 0 10px #000;
 }
 
 #todo-list span {
@@ -154,11 +210,37 @@ footer {
 
 /* === Header Flexbox Containers === */
 header .links {
-  width: 50%;
+  width: 66%;
 }
 header .weather {
-  width: 50%;
+  width: 33%;
   padding: 0;
+}
+
+.weather {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.weather .iconpic {
+  width: 75%;
+  margin: 0;
+}
+
+.weather .temp {
+  width: 25%;
+  margin: 0;
+  align-self: center;
+}
+
+.weather h4 {
+  width: 100%;
+  margin: 0;
+}
+
+.weather .toggle {
+  width: 100%;
 }
 
 /* === Main Flexbox Containers === */

@@ -17,7 +17,7 @@
       <h4 class="temp"></h4>
       <h4><span class="city"></span></h4>
       <div class="toggle" id="c">
-      <button type="button" class="btn btn-danger btn-lg">Toggle temperature</button>
+      <button type="button" class="btn btn-danger btn-lg">F/C</button>
     </div>
   </header>
 
@@ -27,12 +27,12 @@
     </div>
 
     <div class="greeting">
-      <p>Good afternoon, Chris</p>
+      <p>Hello there, Rockstar</p>
     </div>
 
-    <div class="focus">
+    <div class="focus" id="focusDiv">
       <p>What is your main focus today?</p>
-      <input type="text" name="" value="">
+      <input type="text" name="" value="" id="focus-input">
     </div>
 
   </main>
@@ -50,7 +50,7 @@
 
       <div id="todo-box">
 
-      <input id="task-input" placeholder="Add a task" type="text">
+      <input id="task-input" placeholder="Add a task" type="text" onsubmit="setMainFocus()">
 
       <ul id="todo-list">
       </ul>

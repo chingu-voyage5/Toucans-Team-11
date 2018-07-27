@@ -7,6 +7,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -106,7 +108,6 @@ footer {
 /* ========== QUOTE STYLINGS ========== */
 .quote {
   text-align: center;
-  margin: 0 auto;
   text-shadow: 0 0 10px #000;
   padding-top: 5%;
 }
@@ -115,10 +116,6 @@ footer {
 #todo-box {
   text-align: right;
   width: 360px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  color: white;
   visibility: hidden;
 }
 
@@ -126,6 +123,9 @@ footer {
   width: 360px;
   margin: 0;
   padding: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 #todo-list li {
@@ -257,7 +257,7 @@ main .focus {
 }
 
 /* === Footer Flexbox Containers === */
-footer .settings {
+/*footer .settings {
   width: 33%;
 }
 
@@ -267,7 +267,7 @@ footer .quote {
 
 footer .todo {
   width: 33%;
-}
+}*/
 
 /* Rotating background images styles */
 .fade-in{
@@ -292,10 +292,38 @@ footer .todo {
   z-index: -1;
 }
 
-footer .todo {
+/*footer .todo {
   width: 33%;
 }
+*/
 
+/* Flex util classes */
+.flex-spacing {
+  flex: 1;
+}
+
+.todo {
+  position: relative;
+}
+
+.todo-btn {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+#todo-box {
+  width: 360px;
+  position: absolute;
+  right: 35px;
+  top: -518px;
+}
+
+#todo-list-container {
+  height: 500px;
+  display: flex;
+  flex-direction: column-reverse;
+}
 /*#point {
   position:relative;
   -moz-animation:mymove 1s ease infinite;

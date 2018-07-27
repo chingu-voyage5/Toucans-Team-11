@@ -34,29 +34,28 @@
       <p>What is your main focus today?</p>
       <input type="text" name="" value="" id="focus-input">
     </div>
-
-  </main>
-
-  <footer>
     <div class="settings">
     </div>
 
-    <div class="quote">
-
-    </div>
-
     <div class="todo">
-      <p onclick="toggleTodo()">Todo</p>
+      <p class="todo-btn" onclick="toggleTodo()">Todo</p>
 
       <div id="todo-box">
-
-      <input id="task-input" placeholder="Add a task" type="text" onsubmit="setMainFocus()">
-
-      <ul id="todo-list">
-      </ul>
+        <div id="todo-list-container">
+          <ul id="todo-list">
+          </ul>
+        </div>
+        <input id="task-input" placeholder="Add a task" type="text" onsubmit="setMainFocus()">
       </div>
 
     </div>
+
+  </main>
+
+  <footer class="flex">
+    <div class="flex-spacing"></div>
+    <div class="quote"></div>
+    <div class="flex-spacing"></div>
 
   </footer>
   <!-- <div class="clock">
